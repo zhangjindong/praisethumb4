@@ -11,3 +11,4 @@ before_script :
    - npm run webpackprod
 script : 
   - karma start
+  

@@ -1,0 +1,12 @@
+User root
+Host dong
+HostName 47.104.179.169
+Port 22
+StrictHostKeyChecking no
+IdentityFile ~/.ssh/dong_key
+IdentitiesOnly yes
+Protocol 2
+Compression yes
+ServerAliveInterval 60
+ServerAliveCountMax 20
+LogLevel INFO

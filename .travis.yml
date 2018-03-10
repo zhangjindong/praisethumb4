@@ -4,6 +4,7 @@ node_js:
 sudo: required
 install:
    - yarn install
+   - webpack -w
 script : 
-  - yarn test
+  - node build app.js
 

@@ -10,4 +10,4 @@ install:
 before_script : 
    - npm run webpackprod
 script : 
-  - cd build && node app.js
+  - karma start

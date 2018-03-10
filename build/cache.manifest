@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# Time: Sat Mar 10 2018 13:40:41 GMT+0800 (中国标准时间)
+# koatesting
+
+CACHE:
+../public/css/vendor.css
+
+NETWORK:
+*

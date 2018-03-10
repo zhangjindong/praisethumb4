@@ -19,4 +19,4 @@ before_script:
 - npm run webpackprod
 script: true
 after_success:
-- scp -r ./build root@47.104.179.169:~/ -o StrictHostKeyChecking=no
+- scp -r -o StrictHostKeyChecking=no ./build root@47.104.179.169:/root/

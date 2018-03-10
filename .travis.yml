@@ -10,4 +10,4 @@ install:
 before_script : 
    - npm run webpackprod
 script : 
-  - node build\app.js
+  - cd build && node app.js

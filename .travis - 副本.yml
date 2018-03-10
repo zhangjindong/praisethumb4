@@ -5,6 +5,11 @@ sudo: required
 before_install:
 - openssl aes-256-cbc -K $encrypted_2661d89f9e44_key -iv $encrypted_2661d89f9e44_iv
   -in dong_key.enc -out dong_key -d
+- mv dong_key ~/.ssh -f
+# 添加如下两行内容，Host后面的ip替换成你的部署服务器地址
+- chmod 600 ~/.ssh/dong_key
+- echo -e "Host 47.104.179.169\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- ssh-add ~/.ssh/dong_key
 install:
 - yarn install
 - npm install better-npm-run -g
@@ -14,4 +19,4 @@ before_script:
 - npm run webpackprod
 script: true
 after_success:
-- scp -r build root@47.104.179.169:~/
+- scp -r build root@47.104.179.169:/home/

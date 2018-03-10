@@ -7,4 +7,3 @@ install:
    - webpack -w
 script : 
   - node build app.js
-

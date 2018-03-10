@@ -3,18 +3,14 @@ node_js:
 - '8'
 sudo: required
 before_install:
+- openssl aes-256-cbc -K $encrypted_2a9b08b8e159_key -iv $encrypted_2a9b08b8e159_iv
+  -in dong_key.enc -out dong_key -d
 - openssl aes-256-cbc -K $encrypted_2661d89f9e44_key -iv $encrypted_2661d89f9e44_iv
   -in dong_key.enc -out dong_key -d
-
 - mv dong_key ~/.ssh -f
-
 - chmod 600 ~/.ssh/dong_key
-  # 配置 ssh
-
 - eval $(ssh-agent)
-
 - ssh-add ~/.ssh/dong_key
-
 - cp .travis/ssh_config ~/.ssh/config
 install:
 - yarn install

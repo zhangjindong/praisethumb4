@@ -5,6 +5,6 @@ sudo: required
 install:
    - yarn install
 before_script : 
-   - webpack -w
+   - npm run webpackprod
 script : 
   - node build\app.js

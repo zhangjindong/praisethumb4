@@ -2,6 +2,9 @@ language: node_js
 node_js:
 - '8'
 sudo: required
+before_install:
+- openssl aes-256-cbc -K $encrypted_2661d89f9e44_key -iv $encrypted_2661d89f9e44_iv
+  -in dong_key.enc -out dong_key -d
 install:
 - yarn install
 - npm install better-npm-run -g

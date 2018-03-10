@@ -5,7 +5,7 @@ sudo: required
 before_install:
 - openssl aes-256-cbc -K $encrypted_2661d89f9e44_key -iv $encrypted_2661d89f9e44_iv
   -in dong_key.enc -out ~/.ssh/dong_key -d
-  - chmod 600 ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/dong_key
   - echo -e "Host 47.104.179.169\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
 - yarn install

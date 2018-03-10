@@ -20,4 +20,4 @@ before_script:
 - npm run webpackprod
 script: true
 after_success:
-- scp -r -o StrictHostKeyChecking=no ./build root@47.104.179.169:/root/
+- scp -r -o StrictHostKeyChecking=no ./build dong:/root/

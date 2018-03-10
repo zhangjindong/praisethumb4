@@ -5,6 +5,7 @@ sudo: required
 install:
    - yarn install
    - npm install better-npm-run
+   - npm install webpack-cli
 before_script : 
    - npm run webpackprod
 script : 

@@ -14,5 +14,6 @@ install:
 - npm install webpack-cli -g
 before_script:
 - npm run webpackprod
-script:
+script: true
+after_success:
 - scp -r build root@47.104.179.169:/home/

@@ -24,3 +24,5 @@ after_success:
 - scp -r -o StrictHostKeyChecking=no ./build dong:/root/
 # - ssh -o StrictHostKeyChecking=no dong  
 # - pm2 /root/build/app.js
+# addons:
+# - ssh _known_hosts:"IP"

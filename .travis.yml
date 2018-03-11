@@ -11,6 +11,7 @@ before_install:
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/dong_key
 - cp .travis/ssh_config ~/.ssh/config
+- chmod 600 ~/.ssh/config
 install:
 - yarn install
 - npm install better-npm-run -g

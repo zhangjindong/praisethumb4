@@ -2,7 +2,6 @@ language: node_js
 node_js:
 - '8'
 sudo: required
-
 before_install:
 - openssl aes-256-cbc -K $encrypted_2a9b08b8e159_key -iv $encrypted_2a9b08b8e159_iv
   -in dong_key.enc -out dong_key -d
@@ -21,5 +20,5 @@ before_script:
 script: true
 after_success:
 - scp -r -o StrictHostKeyChecking=no ./build dong:/root/
-# - ssh -o StrictHostKeyChecking=no dong
+# - ssh -o StrictHostKeyChecking=no dong  
 # - pm2 /root/build/app.js

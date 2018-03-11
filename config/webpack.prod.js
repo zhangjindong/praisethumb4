@@ -12,12 +12,12 @@ module.exports = {
         ],
         tag: [
             path.join(__dirname, '../src/public/scripts/tag.es'),
-              path.join(__dirname, '../src/public/scripts/star.es')
+            path.join(__dirname, '../src/public/scripts/star.es')
         ]
     },
     output: {
         filename: 'public/scripts/[name]-[hash:5].js',
-         publicPath: 'http://192.168.0.111:3000/', 
+        publicPath: 'http://47.104.179.169:3000/',
         path: path.join(__dirname, '../build/')
     },
     module: {
@@ -61,11 +61,11 @@ module.exports = {
             cssProcessorOptions: { discardComments: { removeAll: true } },
             canPrint: true
         }),
-         new webpack.optimize.CommonsChunkPlugin({
+        new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: 'public/scripts/common/vendor-[hash:5].min.js',
         }),
-       new HtmlWebpackPlugin({ // Also generate a test.html 
+        new HtmlWebpackPlugin({ // Also generate a test.html 
             filename: './views/layout.html',
             template: 'src/widget/layout.html',
             inject: false,
@@ -75,22 +75,22 @@ module.exports = {
             template: 'src/views/index.js',
             inject: false,
             chunks: ['vendor', 'index', 'tag'],
-        }), 
-         new HtmlWebpackPlugin({ // Also generate a test.html 
+        }),
+        new HtmlWebpackPlugin({ // Also generate a test.html 
             filename: './widget/index.html',
             template: 'src/widget/index.html',
             inject: false,
         }),
-         new HtmlWebpackPlugin({ // Also generate a test.html 
+        new HtmlWebpackPlugin({ // Also generate a test.html 
             filename: './views/star.html',
             template: 'src/views/star.js',
             inject: false,
             chunks: ['vendor', 'index', 'tag'],
-        }), 
-         new HtmlWebpackPlugin({ // Also generate a test.html 
+        }),
+        new HtmlWebpackPlugin({ // Also generate a test.html 
             filename: './widget/star.html',
             template: 'src/widget/star.html',
             inject: false,
-        }),  
+        }),
     ]
 };
